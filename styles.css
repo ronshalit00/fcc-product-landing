@@ -1,0 +1,203 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-padding-top: 130px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+header img {
+    width: 120px;
+    height: auto;
+}
+header {
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+/* I don't need it but it still doesn't fix the issue */
+#nav-bar {
+    position: fixed;
+    right: 0;
+}
+#nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+    padding-right: 20px;
+}
+#nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+@media (hover: hover) {
+    #nav-bar a:hover{
+        color: #6a2642;
+        transition: ease-in-out 0.09s color;
+    }
+}
+main {
+    padding: 0 5rem;
+    margin-top: calc(120px + 2rem);
+    margin-left: 15%;
+    margin-right: 15%;
+}
+section {
+    margin: 3rem 0;
+}
+.section-title {
+    text-align: center;
+    margin: 2rem;
+    font-size: 2.4rem;
+}
+#about p {
+    margin: 1rem 3rem;
+}
+p, label {
+    font-size: 1.2rem;
+}
+#about img {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    display: block;
+}
+figcaption {
+    display: block;
+    text-align: center;
+    margin: -1rem 0;
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+iframe {
+    display: block;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 1000px;
+}
+#contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#contact-container > p {
+    width: 30%;
+}
+form {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 1rem;
+    border-radius: 10px;
+}
+input {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border: none;
+    background-color: #353739;
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+input::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+input[type="submit"] {
+    width: auto;
+    padding: 0.5rem;
+    background-color: #5A0E2D;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #353739;
+    color: #fff;
+}
+footer a {
+    text-decoration: none;
+    color: #96677a;
+    font-weight: 700;
+    cursor: pointer;
+}
+@media (hover: hover) {
+    footer a:hover {
+        color: orangered;
+    }
+}
+@media screen and (max-width: 1200px) {
+    main {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 0 3rem;
+    }
+}
+
+@media screen and (max-width: 996px) {
+    main {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 3rem;
+    } 
+}
+@media screen and (max-width: 804px) {
+    main {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-evenly;
+        position: relative;
+    }
+    header img {
+        width: 90px;
+    }
+    main {
+        margin-top: 0;
+    }
+    #about p {
+        margin: 20px 10px;
+    }
+    form {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+    }
+    #contact-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    #contact-container p {
+        width: 100%;
+    }
+}
